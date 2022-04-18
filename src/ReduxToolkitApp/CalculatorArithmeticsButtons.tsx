@@ -1,11 +1,11 @@
 import { useDispatch, useSelector } from "react-redux"
-import { addToHistory, setResult } from "./actions/calculator";
-import { Operation } from "./App";
+import { addToHistory, setResult } from "./features/calculator/calculator-slice";
+import { Operation } from "./ReduxAppToolkit";
 import { RootState } from "./store"
 
 export const CalculatorArithmeticsButtons = () => {
     const dispatch = useDispatch();
-    const {first, second} = useSelector((store: RootState)=>store.calculator);
+    const {first, second} = useSelector((store: RootState) => store.calculator);
 
     const handleSetOperationResult = (result: number | string) => {
         dispatch(setResult(result));

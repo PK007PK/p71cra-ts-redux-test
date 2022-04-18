@@ -1,5 +1,3 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { Provider } from 'react-redux';
 import { store } from './store';
@@ -15,7 +13,7 @@ export enum Operation {
   DIVIDE,
 }
 
-function App() {
+function ReduxAppToolkit() {
   return (
     <div className="App">
       <Provider store={store}>
@@ -28,4 +26,4 @@ function App() {
   );
 }
 
-export default App;
+export default ReduxAppToolkit;
